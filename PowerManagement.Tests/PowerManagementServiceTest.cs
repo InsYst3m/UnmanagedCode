@@ -45,5 +45,21 @@ namespace PowerManagement.Tests
 
             Assert.IsTrue(wakeTime > 0);
         }
+
+        [Test]
+        public void ReserveFileTest()
+        {
+            var result = _service.ReserveHibernateFile();
+
+            Assert.IsTrue(result);
+        }
+
+        [Test]
+        public void DeleteFileTest()
+        {
+            var result = _service.DeleteHibernateFile();
+
+            Assert.IsTrue(result);
+        }
     }
 }

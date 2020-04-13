@@ -1,4 +1,5 @@
-﻿using PowerManagement.Configuration.PowerManagementStructures;
+﻿using PowerManagement.Configuration.Enums;
+using PowerManagement.Configuration.PowerManagementStructures;
 using System;
 using System.Runtime.InteropServices;
 
@@ -7,7 +8,7 @@ namespace PowerManagement.Configuration
     internal class PowerManagementConfiguration
     {
         [DllImport("PowrProf.dll")]
-        public static extern uint CallNtPowerInformation(
+        public static extern PowerInformationStatus CallNtPowerInformation(
             PowerInformationLevel informationLevel,
             IntPtr inputBuffer,
             int inputBufferSize,
@@ -15,7 +16,7 @@ namespace PowerManagement.Configuration
             int outputBufferSize);
 
         [DllImport("PowrProf.dll")]
-        public static extern uint CallNtPowerInformation(
+        public static extern PowerInformationStatus CallNtPowerInformation(
             PowerInformationLevel informationLevel,
             IntPtr inputBuffer,
             int inputBufferSize,
@@ -23,11 +24,26 @@ namespace PowerManagement.Configuration
             int outputBufferSize);
 
         [DllImport("PowrProf.dll")]
-        public static extern uint CallNtPowerInformation(
+        public static extern PowerInformationStatus CallNtPowerInformation(
             PowerInformationLevel informationLevel,
             IntPtr inputBuffer,
             int inputBufferSize,
             out long time,
             int outputBufferSize);
+
+        [DllImport("PowrProf.dll")]
+        public static extern PowerInformationStatus CallNtPowerInformation(
+            PowerInformationLevel informationLevel,
+            IntPtr inputBuffer,
+            int inputBufferSize,
+            IntPtr outputBuffer,
+            uint outputBufferSize);
+
+        [DllImport("PowrProf.dll", SetLastError = true)]
+        public static extern uint SetSuspendState(
+            bool Hibernate,
+            bool Force,
+            bool WakeupEventsDisabled
+        );
     }
 }
