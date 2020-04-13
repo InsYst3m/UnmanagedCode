@@ -13,5 +13,13 @@ namespace PowerManagement.Configuration
             int inputBufferSize,
             out SystemBatteryState systemBatteryState,
             int outputBufferSize);
+
+        [DllImport("PowrProf.dll")]
+        public static extern uint CallNtPowerInformation(
+            PowerInformationLevel informationLevel,
+            IntPtr inputBuffer,
+            int inputBufferSize,
+            out SystemPowerInformation systemBatteryState,
+            int outputBufferSize);
     }
 }

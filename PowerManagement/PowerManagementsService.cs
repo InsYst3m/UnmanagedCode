@@ -14,5 +14,13 @@ namespace PowerManagement
 
             return state;
         }
+
+        public SystemPowerInformation GetSystemPowerInformation()
+        {
+            PowerManagementConfiguration.CallNtPowerInformation(PowerInformationLevel.SystemPowerInformation,
+                IntPtr.Zero, 0, out SystemPowerInformation info, Marshal.SizeOf(typeof(SystemPowerInformation)));
+
+            return info;
+        }
     }
 }

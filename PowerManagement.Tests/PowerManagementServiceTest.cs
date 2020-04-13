@@ -21,5 +21,13 @@ namespace PowerManagement.Tests
             Assert.IsNotNull(state);
             Assert.IsFalse(state.BatteryPresent);
         }
+
+        [Test]
+        public void GetSystemPowerInformationTest()
+        {
+            var info = _service.GetSystemPowerInformation();
+
+            Assert.IsNotNull(info);
+        }
     }
 }
