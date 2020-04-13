@@ -29,5 +29,21 @@ namespace PowerManagement.Tests
 
             Assert.IsNotNull(info);
         }
+
+        [Test]
+        public void GetLastSleepTimeTest()
+        {
+            var sleepTime = _service.GetLastSleepTime();
+
+            Assert.IsTrue(sleepTime > 0);
+        }
+
+        [Test]
+        public void GetLastWakeTimeTest()
+        {
+            var wakeTime = _service.GetLastWakeTime();
+
+            Assert.IsTrue(wakeTime > 0);
+        }
     }
 }

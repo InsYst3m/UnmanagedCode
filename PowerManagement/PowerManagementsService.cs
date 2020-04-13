@@ -22,5 +22,25 @@ namespace PowerManagement
 
             return info;
         }
+
+        public int GetLastSleepTime()
+        {
+            PowerManagementConfiguration.CallNtPowerInformation(PowerInformationLevel.LastSleepTime,
+                IntPtr.Zero, 0, out long time, Marshal.SizeOf(typeof(long)));
+
+            var dateTime = new DateTime(2020, 4, 13, 0, 0, 0);
+
+            return dateTime.AddTicks(time / 100).Second;
+        }
+
+        public int GetLastWakeTime()
+        {
+            PowerManagementConfiguration.CallNtPowerInformation(PowerInformationLevel.LastWakeTime,
+                IntPtr.Zero, 0, out long time, Marshal.SizeOf(typeof(long)));
+
+            var dateTime = new DateTime(2020, 4, 13, 0, 0, 0);
+
+            return dateTime.AddTicks(time / 100).Second;
+        }
     }
 }
