@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerManagement", "PowerManagement\PowerManagement.csproj", "{83B60ECB-D057-4739-9369-E6E13D5A9C7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PowerManagement", "PowerManagement\PowerManagement.csproj", "{83B60ECB-D057-4739-9369-E6E13D5A9C7C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerManagement.Tests", "PowerManagement.Tests\PowerManagement.Tests.csproj", "{F84BE425-DA80-4462-82C8-FF6C8F6D8EED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PowerManagement.Tests", "PowerManagement.Tests\PowerManagement.Tests.csproj", "{F84BE425-DA80-4462-82C8-FF6C8F6D8EED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerManagementCOM", "PowerManagementCOM\PowerManagementCOM.csproj", "{71ADA2F3-BB64-4747-97B6-56AB852390FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{F84BE425-DA80-4462-82C8-FF6C8F6D8EED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F84BE425-DA80-4462-82C8-FF6C8F6D8EED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F84BE425-DA80-4462-82C8-FF6C8F6D8EED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71ADA2F3-BB64-4747-97B6-56AB852390FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71ADA2F3-BB64-4747-97B6-56AB852390FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71ADA2F3-BB64-4747-97B6-56AB852390FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71ADA2F3-BB64-4747-97B6-56AB852390FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
